@@ -58,7 +58,7 @@ if (isset($_GET['id'])) {
         }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
         .form-group input, .form-group textarea {
             width: calc(100% - 12px);
