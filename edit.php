@@ -39,12 +39,19 @@ if (isset($_GET['id'])) {
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 800px;
             margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
+            max-width: 800px;
+        }
+        .container h2{
+            text-align: center;
+        }
+        .form-box{
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .form-box h3{
+            text-align: center;
+            margin-bottom: 20px;
         }
         .form-group {
             margin-bottom: 10px;
@@ -81,7 +88,9 @@ if (isset($_GET['id'])) {
 </head>
 <body>
     <div class="container">
-        <h2>Edit Lokasi</h2>
+        <h2>Sistem Informasi Geografis</h2>
+        <div class="form-box">
+        <h3>Edit Lokasi</h3>
         <form action="proses_edit.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="form-group">
@@ -112,6 +121,7 @@ if (isset($_GET['id'])) {
                 <button type="submit">Simpan Perubahan</button>
             </div>
         </form>
+        </div>
     </div>
     
 </body>

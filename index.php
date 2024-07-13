@@ -58,7 +58,21 @@
             padding: 12px 15px;
             border: 1px solid #ddd;
             text-align: left;
-}
+        }
+        ..form-group button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }    
+        .form-group button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .form-group button[type="submit"] {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
