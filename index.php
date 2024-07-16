@@ -112,16 +112,25 @@
         </div>
         <div class="table-data">
             <div class="judul-table"><h3>Data Lokasi</h3></div>
-            <table border="1">
+            <table border="1" cellspacing="3">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nama Lokasi</th>
-                        <th>Garis Lintang (Dari-Sampai)</th>
-                        <th>Garis Bujur (Dari-Sampai)</th>
-                        <th>Deskripsi</th>
-                        <th>Dibuat Pada</th>
-                        <th>Aksi</th>
+                        <th rowspan="2">ID</th>
+                        <th rowspan="2">Nama Lokasi</th>
+                        <th colspan="2">Garis Lintang</th>
+                        <th colspan="2">Garis Bujur</th>
+                        <th rowspan="2">Deskripsi</th>
+                        <th rowspan="2">Dibuat Pada</th>
+                        <th colspan="2">Aksi</th>
+                    </tr>
+                    <tr>
+                        <th>Dari</th>
+                        <th>Hingga</th>
+                        <th>Dari</th>
+                        <th>Hingga</th>
+                        <th>Edit</th>
+                        <th>Hapus</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -134,11 +143,14 @@
                             echo '<tr>';
                             echo '<td>' . $row['id'] . '</td>';
                             echo '<td>' . $row['nama_lokasi'] . '</td>';
-                            echo '<td>' . $row['lintang_dari'] . ' - ' . $row['lintang_sampai'] . '</td>';
-                            echo '<td>' . $row['bujur_dari'] . ' - ' . $row['bujur_sampai'] . '</td>';
+                            echo '<td>' . $row['lintang_dari'] .'</td>';
+                            echo '<td>' . $row['lintang_sampai'] . '</td>';
+                            echo '<td>' . $row['bujur_dari'] . '</td>';
+                            echo '<td>' . $row['bujur_sampai'] . '</td>';
                             echo '<td>' . $row['deskripsi'] . '</td>';
                             echo '<td>' . $row['dibuat_pada'] . '</td>';
-                            echo '<td><a href="edit.php?id=' . $row['id'] . '">Edit</a> | <a href="delete.php?id=' . $row['id'] . '" onclick="return confirm(\'Yakin ingin menghapus?\')">Hapus</a></td>';
+                            echo '<td> <a href="edit.php?id=' . $row['id'] . '">Edit</a></td>';
+                            echo '<td><a href="delete.php?id=' . $row['id'] . '" onclick="return confirm(\'Yakin ingin menghapus?\')">Hapus</a></td>';
                             echo '</tr>';
                         }
                     } else {
